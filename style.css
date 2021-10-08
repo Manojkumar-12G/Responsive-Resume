@@ -1,0 +1,318 @@
+*, html, body {
+
+  -webkit-box-sizing:border-box;
+  -msbox-sizing:border-box;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+/* ::after,::before{
+  counter:"";
+  display: table;
+} */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: radial-gradient(#c7c7c7 25%, #c7c7c7 74%);
+  /* font-family: system-ui; */
+  /*display: flex;*/
+}
+
+.main {
+  /* max-width: 800px; */
+  max-width: 65%;
+  background-color: white;
+  box-shadow: 5px 7px 15px 5px #b9b6b6;
+  margin: 20px auto;
+  padding-bottom: 30px;
+}
+
+.container-1 {
+  background-color: #1c2741;
+  text-align: center;
+  padding: 20px;
+}
+
+.p1, .p2 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.p3 {
+  text-align: justify;
+}
+
+.profile {
+  height: 150px;
+  border-radius: 50%;
+  width: 150px;
+}
+
+.container-2, .container-4, .container-3, .container-5, .container-6 {
+  padding: 0 20px;
+}
+
+/* .container-3{
+      padding: 0 10px;
+      margin: 40px auto 0;
+  }*/
+.container-2 .containersummary {
+  padding: 0 20px;
+}
+
+.container-3 .containertable {
+  padding: 0 20px;
+}
+
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  /* border: 1px solid #ddd; */
+}
+
+.table thead {
+  background-color: #1c2741;;
+}
+
+.table thead tr th {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+  color: #f3ebeb;
+  opacity: 1;
+  padding: 12px;
+  vertical-align: top;
+  border: 1px solid #383c3f85;
+}
+
+.table tbody tr td {
+  font-size: 14px;
+  letter-spacing: 0.35px;
+  font-weight: normal;
+  color: #111010;
+  background-color: #eff0f1;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #151b29;
+}
+
+.container-4 .projectcontainer {
+  padding: 0 20px;
+}
+
+.container-4 .box {
+  display: flex;
+  flex-direction: row;
+}
+
+.container-4 .box .year_company {
+  min-width: 160px;
+}
+
+
+.skills {
+  display: grid;
+  /* grid-template-columns:repeat(2,1fr); */
+  grid-template-columns: auto auto;
+  grid-gap: 10px 40px;
+  padding: 0 20px;
+}
+
+.skills .box h4 {
+  text-transform: uppercase;
+  color: coral;
+  font-weight: bold;
+  /* font-weight: 500; */
+}
+
+.skills .box .Percent {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: #bfcdbe;
+}
+
+.skills .box .Percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #151b29;
+}
+
+.icons {
+  color: #f1f4f5;
+}
+
+.icons i {
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* .resume_item{
+  padding:0 20px;
+} */
+.resume_interests .resume_info {
+  display: flex;
+  justify-content: space-between;
+  /***/
+  flex-wrap: wrap;
+  /***/
+  text-align: center;
+  padding: 0 20px;
+}
+/****/
+.resume_interests .interests{
+  margin:10px;
+}
+/****/
+.resume_interests .interests .int_icon {
+  font-size: 38px;
+  color: #14628f;
+  margin-bottom: 10px;
+}
+/*********************** media query1 for tabel*******************/
+@media (max-width: 800px) {
+  .table thead {
+    display: none;
+  }
+
+  .table, .table tbody, .table tr, .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table tr {
+    margin-bottom: 15px;
+  }
+
+  .table tbody tr td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .table td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-size: 14px;
+    text-align: left;
+  }
+}
+
+.container-6::after {
+  content: "";
+  display: table;
+}
+/**********************media query 1********************/
+@media(max-width:462px) {
+  .skills {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .container-4 .box {
+    flex-direction: column;
+  }
+
+  .main {
+    max-width: 100%;
+    margin:0;
+    /***/
+    text-align:center;
+  }
+  body{
+    background-image: initial;
+  }
+}
+
+/**************************media query2********************************/
+@media (max-width:700px) {
+  .skills {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .container-4 .box {
+    flex-direction: column;
+  }
+
+  .table thead {
+    display: none;
+  }
+
+  .table, .table tbody, .table tr, .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table tbody tr td {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .table td:before {
+    content: "";
+  }
+}
+
+
+/**************************media query3********************************/
+@media (max-width:850px){
+  .skills {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .container-4 .box {
+    flex-direction: column;
+  }
+}
+
+
+
+/**************************media query4********************************/
+/**************************For table over flow********************************/
+@media (min-width:800px) and (max-width:1150px){
+  /* table{
+    table-layout: fixed;
+    width:100%;
+  } */
+  .container-3 .containertable{
+    overflow-x: auto;
+  }
+}
+
+
+/******************for flex items interests********/
+/* @media (min-width:500px) and (max-width:760px){
+  .interests{
+    flex:50%;
+    max-width: 50%;
+  }
+} */
+
+/**********for horizontal scroll bar adding at last*************/
+@media(max-width:450px){
+
+    body{
+      overflow-x: hidden;
+      position: relative;
+    }
+    /***another useful tag for above***/
+    /* body{
+    overflow-x:hidden;
+    width:100%;
+       /*-webkit-box-sizing:border-box;
+          -moz-box-sizing:border-box;
+    } */
+
+
+}
